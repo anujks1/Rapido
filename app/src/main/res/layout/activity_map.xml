@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/travel_detail" />
+
+    <RelativeLayout
+        android:id="@+id/travel_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/travel_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:drawableLeft="@drawable/ic_car1"
+            android:drawablePadding="@dimen/padding_small"
+            android:drawableTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_car1"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="7km" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/travel_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_time1"
+            android:drawablePadding="@dimen/padding_small"
+            android:drawableStart="@drawable/ic_time1"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="55 mins"
+            android:layout_alignBaseline="@+id/travel_distance"
+            android:layout_alignBottom="@+id/travel_distance"
+            android:layout_toRightOf="@+id/travel_distance"
+            android:layout_toEndOf="@+id/travel_distance" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

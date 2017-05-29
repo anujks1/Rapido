@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Rapido</string>
+    <string name="enter_source">Enter Source</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="view_routes">View Routes</string>
+</resources>
